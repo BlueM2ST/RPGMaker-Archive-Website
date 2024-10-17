@@ -1,0 +1,30 @@
+<%- include("head") %>
+
+
+<nav>
+  <div class="nav-col-1">
+    <input id="search-input" type="text" placeholder="Search">
+    <button id="search-button">Search</button>
+  </div>
+  <div class="nav-col-2">
+    <label for="sort">Sort by:</label>
+    <select name="sort" id="sort-selct">
+      <option value="none">None</option>
+      <option value="size">Size</option>
+      <option value="release-year">Release Year</option>
+    </select>
+  </div>
+</nav>
+
+<div class="main-container">
+  <!-- For each database entry, add a row -->
+  <% if (locals.query.length > 0) { %> 
+    <% for(var i=0; i<locals.query.length; i++) { %>
+      <%- include("row", {i:i, query:query}) %>
+    <% } %>
+  <% } else { %>
+    <p>Nothing found</p>
+  <% } %>
+</div>
+
+<%- include("foot") %>

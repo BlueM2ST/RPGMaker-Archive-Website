@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: url("../images/tile_bg.webp"),
+    url("../images/tile_bg_bottom.webp");
+  background-repeat: repeat-x, round;
+}
+
+header div {
+  display: flex;
+  background-color: blueviolet;
+}
+
+.header-item {
+  width: 100px;
+  margin: 10px;
+  border: 3px solid grey;
+  background-color: purple;
+  min-height: 60px;
+  align-content: center;
+}
+
+.header-item-1 {
+  flex-grow: 2;
+}
+
+.header-item-2 {
+  flex-grow: 1;
+}
+
+/* ==================Nav================== */
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-auto-rows: minmax(25px, auto);
+  min-height: 50vh;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.nav-col-1 {
+  grid-column: 1 / 2;
+  grid-row: 4;
+}
+
+.nav-col-2{
+  grid-column: 2 / 3;
+  grid-row: 4;
+}
+
+nav input {
+  width: 40%;
+  max-height: 1%;
+  background-color: rgb(170, 228, 228);
+  padding: 15px 15px 15px 40px;
+  font-size: 24px;
+  /* border */
+  border-style: ridge;
+  border-width: 0.5rem;
+  border-image-source: url("../images/border_transparent.webp");
+  border-image-slice: 49%;
+  border-image-repeat: repeat;
+  /* icon */
+  background-image: url("../images/search_icon.webp");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  /* placement */
+  float: left;
+}
+
+#search-button {
+  width: 20%;
+  height: 50%;
+  float: left;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+/* ==================Main container================== */
+
+.main-container {
+  max-width: 1200px;
+  min-height: 90vh;
+  margin: auto;
+}
+
+/* ==================Main grid================== */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(30px, auto);
+  max-width: 100%;
+  margin-bottom: 10px;
+  border-style: ridge;
+  border-width: 1.3rem;
+  border-image-source: url("../images/border_transparent.webp");
+  border-image-slice: 40%;
+  border-image-repeat: repeat;
+  background-color: #336042;
+  color: rgb(206, 202, 202);
+}
+
+.grid-thumbnail {
+  grid-column: 1 / 2;
+  grid-row: 1/4;
+}
+
+.grid-thumbnail img {
+  max-width: 80%;
+}
+
+.grid-title {
+  grid-column: 2 / 5;
+  grid-row: 1;
+  font-weight: bold;
+}
+
+.grid-author {
+  grid-column: 2 / 5;
+  grid-row: 2;
+}
+
+.grid-tags {
+  grid-column: 2 / 5;
+  grid-row: 3;
+}
+
+.grid-downloads {
+  grid-column: 5 / 7;
+  grid-row: 3;
+}
+
+.grid-release {
+  grid-column: 5 / 6;
+  grid-row: 1 / 3;
+  text-align: center;
+  margin: auto;
+}
+
+.grid-size {
+  grid-column: 6 / 7;
+  grid-row: 1 / 3;
+  text-align: center;
+  margin: auto;
+}
+
+/* ==================Buttons and links================== */
+
+.download-button {
+  border: none;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  float: right;
+  margin-right: 5%;
+  min-width: 25%;
+}
+
+.main-download-button {
+  background-color: blue;
+}
+
+.main-download-button:hover {
+  background-color: rgb(82, 82, 231);
+}
+
+.secondary-download-button {
+  background-color: green;
+}
+
+.secondary-download-button:hover {
+  background-color: yellowgreen;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ==================Text================== */
+
+.title-text {
+  font-size: 24px;
+}
+
+.tag-text {
+  font-size: 14px;
+  color: white;
+}

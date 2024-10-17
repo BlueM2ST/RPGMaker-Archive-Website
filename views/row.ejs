@@ -1,0 +1,48 @@
+<div class="grid-container">
+  
+   <!-- thumbnail -->
+  <div class="grid-thumbnail">
+    <img src="images/placeholder_img.webp" alt="Placeholder image">
+  </div>
+
+  <!-- title -->
+  <div class="grid-title">
+    <p><span class="title-text"><%= locals.query[i].TITLE %></span></p>
+  </div>
+
+
+  <div class="grid-author">
+    <p><span>Made by <strong><%= locals.query[i].AUTHOR || "unknown" %></strong></span><span> using <strong><%= locals.query[i].ENGINE || "unknown engine" %></strong></span></p>
+  </div>
+
+  <!-- release year, if exists -->
+  <% if(locals.query[i].RELEASE_YEAR) { %>
+  <div class="grid-release">
+    <h3><%=locals.query[i].RELEASE_YEAR %></h3>
+  </div>
+  <% } %>
+
+  <!-- file size, if exists -->
+  <% if(locals.query[i].SIZE_MB) { %>
+  <div class="grid-size">
+    <h3><%=locals.query[i].SIZE_MB %>MB</h3>
+  </div>
+  <% } %>
+
+  <div class="grid-tags">
+    <p class="tag-text">tag1, tag2, tag3</p>
+  </div>
+  <div class="grid-downloads">
+    <% if(locals.query[i].DOWNLOAD_LINK) { %>
+    <button class="download-button main-download-button">
+      <a href="<%= locals.query[i].DOWNLOAD_LINK %>">Download</a>
+    </button>
+    <% } %>
+    <% if(locals.query[i].MIRROR_LINK) { %>
+    <button class="download-button secondary-download-button">
+      <a href="<%= locals.query[i].MIRROR_LINK %>">Mirror Link</a>
+    </button>
+    <% } %>
+  </div>
+
+</div>
